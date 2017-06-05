@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html ng-app="wishlist" ng-controller="wishList">
+	<head>
+		<meta charset="UTF-8">
+			<link rel="stylesheet" type="text/css" href="css/main.css"/>
+			<link rel="stylesheet" type="text/css" href="css/withlist.css"/>
+			<link rel="stylesheet" type="text/css" href="css/user_index.css"/>
+		<title>购物车</title>
+	</head>
+	<body>
+		<!--顶部导航-->			
+		<div class="global_nav" id="db-global-nav">
+				<div class="bd">
+					
+					<div class="global_nav_items">
+						<ul>
+							<li><a href="#">豆瓣</a></li>
+							<li><a href="#">读书</a></li>
+							<li><a href="#">电影</a></li>
+							<li><a href="#">市集</a></li>
+						</ul>
+					</div>
+					
+					<div class="top_nav_info">
+    
+					    
+					    <ul>
+					       
+					       <li><a id="top_nav_doumail_link" href="#">豆邮<em>(1)</em></a></li>
+					       <li class="nav_user_account more-active">
+					       <a target="_blank" href="#" class="bn_more" rel="off">
+					         <span>什么叫什么的帐号</span>
+					         <span class="arrow"></span>
+					       </a>
+					       <div class="more_items "id="more-items">
+					      <table cellpadding="0" cellspacing="0">
+					            <tbody><tr><td><a href="#">个人主页</a></td></tr>
+					            <tr><td><a target="_blank" href="order_list.html">我的订单</a></td></tr>
+					            <tr><td><a target="_blank" href="#">我的钱包</a></td></tr>
+					            <tr><td><a target="_blank" href="#">帐号管理</a></td></tr>
+					            <tr><td><a href="#">退出</a></td></tr>
+					         </tbody></table>
+					       </div>
+					
+					       </li>
+					     </ul>
+					</div>
+					
+					<div class="download_app more-active">
+						<a href="#" class="lnk_app">下载APP</a>
+						<div id="top_nav_appintro" class="more_items">
+				            <p class="appintro_title">豆瓣</p>
+				            <p class="slogan">我们的精神角落</p>
+				            <p class="qrcode">
+				                扫码直接下载
+				            </p>
+				            <div class="download">
+				                <a href="#">iPhone</a>
+				                <span>·</span>
+				                <a href="#" class="download-android">Android</a>
+				            </div>
+				        </div>
+					</div>
+					
+					
+					
+					
+				</div>
+		</div>
+				<!--顶部导航-->
+		<!--菜单导航-->
+		<div id="db-nav-sns" class="nav">
+		  <div class="nav-wrap">
+		    <div class="nav-primary">
+		      <div class="nav-search">
+		        <form action="#" method="get">
+		            
+		            <div class="inp">
+		              <!--<input type="hidden" name="source" value="suggest">-->
+		              <input id="inp-query" name="q" size="22" title="搜索搜索你感兴趣的内容和人..." maxlength="60" autocomplete="off" value="" placeholder="搜索你感兴趣的内容和人...">
+		            </div>
+		            <div class="inp-btn"><input type="submit" value="搜索"></div>
+		        </form>
+		      </div>
+		
+		      <div class="nav-logo">
+		        <a href="douban_index.html">豆瓣社区</a>
+		      </div>
+		
+		      <div class="nav-items">
+		        <ul>
+		          <li><a href="#">首页</a></li>
+		            <li><a href="#">我的豆瓣</a></li>
+		          <li>
+		              <a href="#">浏览发现</a>
+		          </li>
+		          <li>
+		              <a href="#" style="position: relative;">话题广场<img src="img/new_menu.gif" alt="new" style="position: absolute; top: -7px; right: -17px;"></a>
+		          </li>
+		          <li>
+		            <a href="#">游戏</a>
+		          </li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>	
+		<!--菜单导航-->
+		<!--购物车内容-->
+		<div class="main">
+			<aside class="col col3">
+				<section class="side-nav">
+					<div class="bd">
+						<ul class="list side-nav-list">
+							<li><a href="/account/notifications" class="">提醒 <span class="nav-tips">1 未读</span></a></li>
+							<li><a href="/account/wishlist" class="on">购物车 <span class="nav-tips">9 本</span></a></li>
+							<li><a href="/account/balance" class="">余额 <span class="nav-tips">¥ 0.00</span></a></li>
+							<li><a href="/account/coupon" class="">礼券 <span class="nav-tips">0 张</span></a></li>
+							<li><a href="/account/donation" class="">送花记录 </a></li>
+							<li><a href="/account/billing" class="">购买记录 </a></li>
+							<li><a href="/account/gifts" class="">礼物记录 </a></li>
+							<li><a href="/account/setting" class="">设置 </a></li></ul></div>
+				
+				</section>
+			</aside>
+			<article class="col col10">
+				<h2>购物车</h2>
+				<section class="wishlist">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th class="select-all">
+									<label class="checkbox"><input type="checkbox" ng-click="CheckAll()">全选</label>
+								</th>
+								<th class="th-name">作品</th>
+								<th class="th-price">价格</th>
+								<th class="th-op">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat=" x in orderList ">
+								<td class="td-select">
+									<input type="checkbox" ng-model="x.selected">
+								</td>
+								
+								<td class="td-name">
+									<a href="ebook.html" target="_blank" class="works-url">{{x.bookName}}</a>
+									<span class="author">{{x.auther}}</span>
+								</td>
+								<td class="td-price">
+									<span class="price-tag discount">
+										<s class="original-tag">{{x.oldPrice}}元</s>
+										<span class="discount-price">{{x.newPrice}}元</span>
+									</span>
+								</td>
+								<td class="td-op">
+									<a ng-click="DeleteOrder(x.bookName)" href="javascript:" class="lnk-delete">删除</a>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+					<div class="bottom-actions">
+						<div class="frozen-button-mask" style="display: none;"></div>
+						<div class="item select-all">
+							<label class="checkbox"><input type="checkbox" ng-click="CheckAll()">全选</label>
+						</div>
+						<div class="item action-batch-delete" >
+							<button class="btn-link bulk-batch-delete"  ng-click="DeleteOrders()">批量删除</button>
+						</div>
+						<div class="right-actions">
+							<div class="item selected-items has-book">已选作品
+						
+					
+							<span class="count-books">
+								<span class="num">{{nums()}}</span>部
+							</span>
+						</div>
+							<div class="item">合计:</div>
+							<div class="item price-sum">￥{{allPrices()}}</div>
+							<div class="item action-purchase">
+								<div class="frozen-button-mask" style="display: none;"></div>
+								<button a.purchase="a.purchase" href="javascript:;" data-action="purchase" class="btn btn-icon bulk-purchase">
+									<i class="icon-buy"></i>结 算</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+			
+		</div>
+		<!--购物车内容-->
+		<footer>
+			<div class="inner">
+				<div class="copyright"> © 2005 - 2017 douban.com, all rights reserved<br>
+					网络视听许可证<a href="https://www.douban.com/about?topic=licence" target="_blank">0110418</a>号 &nbsp;&nbsp;
+					文网文[2009]267号&nbsp;&nbsp;新出网证(京)字129号 
+					<img width="15" height="17" src="https://img3.doubanio.com/f/ark/b231fcec16444a6fad1339b7a08ff4c3c7d1feab/pics/biaoshi.png">
+					
+				</div>
+				<div class="ft-nav">
+					<a href="/contact">联系我们</a>·
+					<a href="/copyright">版权声明</a>·
+					<a href="https://help.douban.com/help/ask?category=book&amp;type=39">使用反馈</a>·
+					<a href="/faq">常见问题</a>·<a href="/careers">来这里工作</a>
+				</div>
+			</div>
+		</footer>	
+		
+		<script src="js/angular-1.0.1.min.js"></script>
+		<script src="js/wishlist.js" ></script>
+	</body>
+</html>

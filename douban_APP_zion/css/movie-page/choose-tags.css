@@ -1,0 +1,27 @@
+.choose-tags{
+	margin-top: 1.5rem;
+	background: white;
+	overflow: hidden;
+}
+.choose-tags-body{
+	padding:  0 2rem;
+}
+.choose-tags-body>div{
+	clear: both;
+	padding-top: .5rem;
+	border-bottom: .1rem solid #CCCCCC;
+	overflow: hidden;
+}
+
+.choose-tags a{
+	padding: .5rem 1rem;
+	border: .1rem solid #42bd56;
+	color: #42bd56;
+	font-size:1.7rem ;
+	border-radius: 1.5rem;
+	text-decoration: none;
+	display: block;
+	float: left;
+	margin-right: 1.2rem;
+	margin-bottom: 0.5rem;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录豆瓣</title>
+		<link rel="stylesheet" type="text/css" href="css/Reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+				  <div id="header">
+				      <a href="" class="logo">登录豆瓣</a>
+				  </div>
+				
+				<div id="content">
+				  <h1>登录豆瓣</h1>
+				  <div class="article">
+				      
+				
+				<form id="lzform" name="lzform" method="post" onsubmit=""  ng-app="">
+				    
+				  <div class="item-right">
+				    <a href="#">手机验证码登录</a>
+				  </div>
+				  <div class="item">
+				    <label>帐号</label>
+				    <input id="email" required="required" ng-focus="focus=true" ng-blur="focus=false" ng-model="useName" ng-pattern="/^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/" name="form_email" type="text" class="basic-input"  maxlength="20" placeholder="邮箱/手机号/用户名" autocomplete="off" tabindex="1" >
+				  	<span ng-show="lzform.form_email.$dirty && lzform.form_email.$invalid && !focus" id="form_email_err" class="error-tip" >请输入正确的邮箱/手机号/用户名</span>
+				  </div>
+				  <div class="item">
+				    <label>密码</label>
+				    <input id="password" required="required" ng-pattern="/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/" ng-model="userPassWord" name="form_password" type="password" class="basic-input" maxlength="20" tabindex="2">
+				  	<span ng-show="lzform.form_password.$dirty && lzform.form_password.$invalid" id="form_password_err" class="error-tip" >请输入正确密码</span>
+				  </div>
+				  
+				  
+				  <div class="item">
+				    <label>&nbsp;</label>
+				    <p class="remember">
+				      <input type="checkbox" id="remember" name="remember" tabindex="4">
+				      <label for="remember" class="remember">下次自动登录</label>
+				      | <a href="https://accounts.douban.com/resetpassword">忘记密码了</a>
+				    </p>
+				  </div>
+				  <div class="item">
+				    <label>&nbsp;</label>
+				    <input type="submit" value="登录" name="login" class="btn-submit" tabindex="5">
+				  </div>
+				  
+				
+				
+				
+				<div class="item item-3rd">
+				    <label>
+				    第三方登录：
+				    </label>
+				    <a target="_top" href="https://www.douban.com/accounts/connect/wechat/?from=index_nav&amp;redir=https%3A//www.douban.com/" class="item-wechat"><img src="https://img3.doubanio.com/f/accounts/1b6cc3ca91f78cf47f41eafa91fbcd4918ae239c/pics/connect_wechat.png" title="微信"></a>
+				    <a target="_top" href="https://www.douban.com/accounts/connect/sina_weibo/?from=index_nav&amp;redir=https%3A//www.douban.com/&amp;fallback=" class="item-weibo"><img src="https://img3.doubanio.com/f/accounts/e2f1d8c0ede93408b46cbbab4e613fb29ba94e35/pics/connect_sina_weibo.png" title="新浪微博"></a>
+				</div>
+				
+				</form>
+				
+				  </div>
+				  <ul id="side-nav" class="aside">
+				    <li>&gt;&nbsp;还没有豆瓣帐号？<a rel="nofollow" href="register.html">立即注册</a></li>
+				    <li>&gt;&nbsp;<a href="#">点击下载豆瓣移动应用</a></li>
+				  </ul>
+				</div>
+				<div id="footer">
+				
+				
+				<span id="icp" class="fleft gray-link">
+				    © 2005－2017 douban.com, all rights reserved
+				</span>
+				
+				<span class="fright">
+				    <a href="https://www.douban.com/about">关于豆瓣</a>
+				    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+				    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+				    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+				    
+				    · <a href="https://www.douban.com/help/">帮助中心</a>
+				    · <a href="https://developers.douban.com/" target="_blank">开发者</a>
+				    · <a href="https://www.douban.com/mobile/">移动应用</a>
+				    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+				</span>
+				
+				
+				
+				
+				</div>
+				
+				
+				
+				<!-- COLLECTED JS -->
+			
+			
+		</div>
+		<script src="js/angular-1.0.1.min.js"></script>
+		
+	</body>
+</html>

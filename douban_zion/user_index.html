@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8" />
+		<title>豆瓣</title>
+		<link rel="stylesheet" type="text/css" href="css/_init_.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user_index.css"/>
+	</head>
+	<body>
+				<!--顶部导航-->			
+		<div class="global_nav" id="db-global-nav">
+				<div class="bd">
+					
+					<div class="global_nav_items">
+						<ul>
+							<li><a href="#">豆瓣</a></li>
+							<li><a href="#">读书</a></li>
+							<li><a href="#">电影</a></li>
+							<li><a href="#">市集</a></li>
+						</ul>
+					</div>
+					
+					<div class="top_nav_info">
+    
+					    
+					    <ul>
+					       
+					       <li><a id="top_nav_doumail_link" href="#">豆邮<em>(1)</em></a></li>
+					       <li class="nav_user_account more-active">
+					       <a target="_blank" href="#" class="bn_more" rel="off">
+					         <span>什么叫什么的帐号</span>
+					         <span class="arrow"></span>
+					       </a>
+					       <div class="more_items" id="more-items">
+					      <table cellpadding="0" cellspacing="0">
+					            <tbody><tr><td><a href="#">个人主页</a></td></tr>
+					            <tr><td><a target="_blank" href="order_list.html">我的订单</a></td></tr>
+					            <tr><td><a target="_blank" href="#">我的钱包</a></td></tr>
+					            <tr><td><a target="_blank" href="#">帐号管理</a></td></tr>
+					            <tr><td><a href="#">退出</a></td></tr>
+					         </tbody></table>
+					       </div>
+					
+					       </li>
+					     </ul>
+					</div>
+					
+					<div class="download_app more-active">
+						<a href="#" class="lnk_app">下载APP</a>
+						<div id="top_nav_appintro" class="more_items">
+				            <p class="appintro_title">豆瓣</p>
+				            <p class="slogan">我们的精神角落</p>
+				            <p class="qrcode">
+				                扫码直接下载
+				            </p>
+				            <div class="download">
+				                <a href="#">iPhone</a>
+				                <span>·</span>
+				                <a href="#" class="download-android">Android</a>
+				            </div>
+				        </div>
+					</div>
+					
+					
+					
+					
+				</div>
+		</div>
+				<!--顶部导航-->			
+		<!--菜单导航-->
+		<div id="db-nav-sns" class="nav">
+		  <div class="nav-wrap">
+		    <div class="nav-primary">
+		      <div class="nav-search">
+		        <form action="#" method="get">
+		            
+		            <div class="inp">
+		              <!--<input type="hidden" name="source" value="suggest">-->
+		              <input id="inp-query" name="q" size="22" title="搜索搜索你感兴趣的内容和人..." maxlength="60" autocomplete="off" value="" placeholder="搜索你感兴趣的内容和人...">
+		            </div>
+		            <div class="inp-btn"><input type="submit" value="搜索"></div>
+		        </form>
+		      </div>
+		
+		      <div class="nav-logo">
+		        <a href="#">豆瓣社区</a>
+		      </div>
+		
+		      <div class="nav-items">
+		        <ul>
+		          <li><a href="#">首页</a></li>
+		            <li><a href="#">我的豆瓣</a></li>
+		          <li>
+		              <a href="#">浏览发现</a>
+		          </li>
+		          <li>
+		              <a href="#" style="position: relative;">话题广场<img src="img/new_menu.gif" alt="new" style="position: absolute; top: -7px; right: -17px;"></a>
+		          </li>
+		          <li>
+		            <a href="#">游戏</a>
+		          </li>
+		        </ul>
+		      </div>
+		    </div>
+		  </div>
+		</div>	
+		<!--菜单导航-->
+		<div id="wrapper">
+			<div id="content">
+				<!--左列表-->
+				<div class="article">
+					<div class="status-setting">
+						<!--首页设置-->
+					</div>
+					<div id="statuses">
+						
+							<!--分享生活-->
+						<div id="db-isay" class="mod isay isay-disable has-commodity ">
+							<form name="mbform" method="post" action="#">
+								
+						    <ul class="isay-links">
+						      <li class="isay-main active"><a data-action="main" href="javascript:void(0);">说句话</a></li>
+						      <li class="isay-pic"><a data-action="pic" href="javascript:void(0);">发照片</a></li>
+						      <li class="isay-share">
+						        <a data-action="share" href="javascript:void(0);">推荐网页</a>
+						      </li>
+						        <li class="notes-link"><a href="#" title="添加日记">写日记</a></li>
+						        <li class="commodity-link">
+						            <a data-action="commodity" href="javascript:void(0)" title="发布东西">发布东西</a>
+						            <!--<div class="publish-ways" style="display: none;">
+						            <div class="share"><a target="_blank" href="#">发布东西</a></div>
+						            <div class="review"><a target="_blank" href="#">写图文评论</a></div>
+						            <s class="arr"></s>
+						            <s class="arr-inner"></s>
+						            </div>-->
+						        </li>
+						    </ul>
+						    <div class="item">
+						      <!--<p class="highlighter mention-highlighter"></p>
+						      <p class="highlighter error-highlighter"></p>-->
+						      <label id="isay-label" for="isay-cont">分享生活点滴...</label>
+						      <textarea data-minheight="70" tabindex="1" id="isay-cont" name="comment" rows="1"></textarea>
+						    </div>
+						    
+						  </form>
+						  <div class="btn-group">
+						    
+						    <a href="javascript:void(0);" tabindex="-1" data-action="pic" class="ico ico-pic" title="上传照片">照片</a>
+						    <a href="javascript:void(0);" tabindex="2" data-action="topic" class="ico ico-topic" title="添加话题">话题</a>
+						  </div>
+						</div>
+							<!--分享生活-->
+							<!--日记-->	
+						<div class="stream-items">
+							<div class="new-status status-wrapper    " data-sid="1981640911" data-uid="900117594">
+
+							<div class="status-item" data-sid="1981640911" data-uid="4628982" data-action="0" data-target-type="editor" data-object-kind="1015" data-object-id="590293933">
+							<div class="mod" data-status-id="1981640911">
+							  
+							  <div class="hd " data-status-url="https://www.douban.com/people/4628982/status/1981640911/">
+							    
+							
+							  <div class="usr-pic">
+							    <a href="#" onclick="" title="西门不庆"><img src="https://img3.doubanio.com/icon/u4628982-10.jpg" alt="西门不庆"></a>
+							  </div>
+							  <div class="text">
+							    <a href="#" onclick="" class="lnk-people">西门不庆</a>
+							    的日记:
+							  </div>
+							
+							  </div>
+							
+							  <div class="bd editor">
+							    
+							
+							<div class="block note-block">
+							
+							  <div class="content">
+							    <div class="title">
+							      <a href="#" onclick="">满口都是黄段子，想不到你是这样的莎士比亚</a>
+							    </div>
+							    <p>一 在莎士比亚的戏剧《特洛埃围城记》（又名《特洛埃勒斯与克蕾雪达》，朱生豪译）中，特洛埃勒斯与克蕾雪达好不容易走在一起，春宵一度。“那张床是不会泄露你们的秘密的，你们尽管去成其美...</p>
+							  </div>
+							</div>
+							<div class="attachment">
+							</div>
+							
+							
+							    <div class="actions">
+							        
+							        <span class="created_at" title="2017-04-24 15:24:03">
+							            35分钟前<span class="ghost">，来自 <a href="https://www.douban.com/interest/1/1/">热门精选</a></span>
+							        </span>
+							    </div>
+							  </div>
+							</div>
+							</div>
+							
+							
+							
+							</div>	
+							
+							<div class="new-status status-wrapper    " data-sid="1981640911" data-uid="900117594">
+
+								<div class="status-item" data-sid="1981640911" data-uid="4628982" data-action="0" data-target-type="editor" data-object-kind="1015" data-object-id="590293933">
+								<div class="mod" data-status-id="1981640911">
+								  
+								  <div class="hd " data-status-url="https://www.douban.com/people/4628982/status/1981640911/">
+								    
+								
+								  <div class="usr-pic">
+								    <a href="#" onclick="" title="西门不庆"><img src="https://img3.doubanio.com/icon/u4628982-10.jpg" alt="西门不庆"></a>
+								  </div>
+								  <div class="text">
+								    <a href="#" onclick="" class="lnk-people">西门不庆</a>
+								    的日记:
+								  </div>
+								
+								  </div>
+								
+								  <div class="bd editor">
+								    
+								
+								<div class="block note-block">
+								<div class="pic">
+								    <div class="pic-wrap">
+								        <a href="#" onclick=""><img src="img/p11125898.jpg"/></a>
+								        <span class="valign"></span>
+								    </div>
+								  </div>
+								  <div class="content">
+								    <div class="title">
+								      <a href="#" onclick="">满口都是黄段子，想不到你是这样的莎士比亚</a>
+								    </div>
+								    <p>一 在莎士比亚的戏剧《特洛埃围城记》（又名《特洛埃勒斯与克蕾雪达》，朱生豪译）中，特洛埃勒斯与克蕾雪达好不容易走在一起，春宵一度。“那张床是不会泄露你们的秘密的，你们尽管去成其美...</p>
+								  </div>
+								</div>
+								<div class="attachment">
+								</div>
+								
+								
+								    <div class="actions">
+								        
+								        <span class="created_at" title="2017-04-24 15:24:03">
+								            35分钟前<span class="ghost">，来自 <a href="https://www.douban.com/interest/1/1/">热门精选</a></span>
+								        </span>
+								    </div>
+								  </div>
+								</div>
+								</div>
+								
+								
+								
+								</div>
+							<div class="new-status status-wrapper    " data-sid="1981640911" data-uid="900117594">
+
+									<div class="status-item" data-sid="1981640911" data-uid="4628982" data-action="0" data-target-type="editor" data-object-kind="1015" data-object-id="590293933">
+									<div class="mod" data-status-id="1981640911">
+									  
+									  <div class="hd " data-status-url="https://www.douban.com/people/4628982/status/1981640911/">
+									    
+									
+									  <div class="usr-pic">
+									    <a href="#" onclick="" title="西门不庆"><img src="https://img3.doubanio.com/icon/u4628982-10.jpg" alt="西门不庆"></a>
+									  </div>
+									  <div class="text">
+									    <a href="#" onclick="" class="lnk-people">西门不庆</a>
+									    的日记:
+									  </div>
+									
+									  </div>
+									
+									  <div class="bd editor">
+									    
+									
+									<div class="block block-album">
+										  <div class="content">
+										      
+											<div class="album-photos">
+											  <a href="https://www.douban.com/photos/album/1644500093/" onclick="">
+											      <img src="img/p2454405420.png">
+											      <img src="img/p24544054202.png">
+											      <img src="img/p2454405732.png">
+											      <img src="img/p2454405851.png">
+											  </a>
+											</div>
+											<div class="title">
+											  <a href="#" onclick="">偷偷去看博物馆</a>
+											</div>
+											
+											  </div>
+										</div>
+											
+									
+									
+									    <div class="actions">
+									        
+									        <span class="created_at" title="2017-04-24 15:24:03">
+									            35分钟前<span class="ghost">，来自 <a href="https://www.douban.com/interest/1/1/">热门精选</a></span>
+									        </span>
+									    </div>
+									  </div>
+									</div>
+									</div>
+									
+									
+									
+									</div>
+						</div>	
+							<!--日记-->	
+							<div class="paginator">
+							        <span class="prev">
+							            &lt;前页
+							        </span>
+							        
+							        
+							
+							                <span class="thispage" data-total-page="">1</span>
+							                
+							            <a href="?p=2">2</a>
+							        
+							                
+							            <a href="?p=3">3</a>
+							        
+							                
+							            <a href="?p=4">4</a>
+							        
+							                
+							            <a href="?p=5">5</a>
+							        
+							                
+							            <a href="?p=6">6</a>
+							        
+							                
+							            <a href="?p=7">7</a>
+							        
+							                
+							            <a href="?p=8">8</a>
+							        
+							                
+							            <a href="?p=9">9</a>
+							        
+							            <span class="break">...</span>
+							        <span class="next">
+							            <link rel="next" href="?p=2">
+							            <a href="?p=2">后页&gt;</a>
+							        </span>	
+					
+					        </div>
+					</div>
+				</div>
+				<!--左列表-->
+					
+				<!--右广告-->
+				<div class="aside">
+					<div class="notify-mod" style="position: static;">
+					    <h2>
+					        豆瓣正在发生
+					            &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+					    </h2>
+					    <ul>
+					            <li>
+					              <a target="_blank" href="# " >第四届豆瓣阅读征文大赛大奖揭晓</a>
+					            </li>
+					            <li>
+					              <a target="_blank" href="#" >邪典电影本纪 — 亚文化电影的世界</a>
+					            </li>
+					    </ul>
+					</div>
+					<div class="adv">
+						<a href="#"><img src="img/f985edd85ca8d2f.jpg"/></a>
+					</div>
+					<div class="mod" style="position: static;">
+    
+						    <h2>
+						        热门话题
+						            &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+						            <span class="pl">&nbsp;(
+						                
+						                    <a href="#" target="_self">去话题广场</a>
+						                ) </span>
+						    </h2>
+						
+						
+						    <ul>
+						        
+						            <li class="rec_topics">
+						                <a href="#" class="rec_topics_name">图书馆</a>
+						                    <span class="rec_topics_label" style="color: #4CC15F;">[新]</span>
+						                <span class="rec_topics_subtitle">与书相伴的精神角落 · 686条内容</span>
+						            </li>
+						            <li class="rec_topics">
+						                <a href="#" class="rec_topics_name">逛唱片店</a>
+						                <span class="rec_topics_subtitle">数字音乐时代的返璞之趣 · 141条内容</span>
+						            </li>
+						            <li class="rec_topics">
+						                <a href="#" class="rec_topics_name">西游记</a>
+						                <span class="rec_topics_subtitle">一番番春秋冬夏，一场场酸甜苦辣 · 477条内容</span>
+						            </li>
+						            <li class="rec_topics">
+						                <a href="#" class="rec_topics_name">谈教育</a>
+						                <span class="rec_topics_subtitle">问题与出路 · 205条内容</span>
+						            </li>
+						            <li class="rec_topics">
+						                <a href="#" class="rec_topics_name">王小波</a>
+						                <span class="rec_topics_subtitle">浪漫骑士，行吟诗人，自由思想家 · 1764条内容</span>
+						            </li>
+						            <li class="rec_topics">
+						                <a href="#" class="rec_topics_name">第七届北京国际电影节</a>
+						                <span class="rec_topics_subtitle">属于影迷的人间四月天 · 160条内容</span>
+						            </li>
+						    </ul>
+						</div>
+					<div id="fp-sites" class="mod" style="position: static;">
+					    <p><a href="#">&gt;&nbsp;申请创建小站</a></p>
+					</div>
+					<div class="mod" style="position: static;">
+					  <a href="#" target="_blank" style="display: block; margin: 0px 0px 10px 0px;">
+					    <img src="img/index_douban_ad_4.png" width="250px" height="80px">
+					  </a>
+					</div>
+					<div class="mod" id="events" style="position: static; width: 250px; top: 10px;">
+    
+					    <h2>
+					        热门活动
+					            &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+					            <span class="pl">&nbsp;(
+					                
+					                    <a href="#" target="_self">换一个</a>
+					                ) </span>
+					    </h2>
+					
+					    <ul id="event-list">
+					    	<li>
+					    	<div class="pic"><a href="#" target="_blank"><img src="img/o710081.jpg"></a></div>
+					    	<div class="content"><div class="title"><a href="#" target="_blank">给我你的照片，让我为你画张肖像。2017鸡年大吉有奖版吧</a></div>时间：2月8日 - 5月7日<br>参加：1578人参加</div>
+					    	</li>
+					    </ul>
+					    <p><a href="#">&gt;&nbsp;更多线上活动</a></p>
+					</div>						
+					<div class="adv">
+						<a href="#"><img src="img/fdfd04c046a62a3.jpg"/></a>
+					</div>
+				</div>
+				<!--右广告栏-->
+			</div>
+								
+					
+			<div id="footer">
+    
+				<span id="icp" class="fleft gray-link">
+				    © 2005－2017 douban.com, all rights reserved 北京豆网科技有限公司
+				</span>
+				
+				<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+				
+				<span class="fright">
+				    <a href="https://www.douban.com/about">关于豆瓣</a>
+				    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+				    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+				    · <a href="https://www.douban.com/about?policy=disclaimer">免责声明</a>
+				    
+				    · <a href="https://help.douban.com/?app=main" target="_blank">帮助中心</a>
+				    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+				    · <a href="https://www.douban.com/partner/">豆瓣广告</a>
+				</span>
+				
+				</div>	
+		</div>
+	</body>
+</html>

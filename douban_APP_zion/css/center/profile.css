@@ -1,0 +1,107 @@
+.golbal-title h1{
+	background: #fff;
+    height: 45px;
+    border-bottom: 1px solid #eee;
+    padding: 0 18px;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /*margin-bottom: 10px;*/
+}
+.golbal-title .header a {
+    color: #42bd56;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    left: 18px;
+    top: 0;
+    text-decoration: none;
+}
+
+.my-zoe {
+   /*margin-top: 3.5rem;*/
+    max-width: 650px;
+    background: #fff;
+    overflow-x: hidden;
+}
+.profile {
+    height: 10rem;
+    margin-bottom: 15px;
+    margin-top: 45px;
+    background: rgba(0,0,0,0.5) no-repeat center/cover;
+}
+.profile .profile-bd {
+    height: 100%;
+    
+    background: rgba(0,0,0,0.25);
+}
+.profile img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 20px 0 0 20px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+}
+.profile .detail {
+    height: 100%;
+    margin-left: 106px;
+    color: #fff;
+    font-size: 13px;
+}
+.profile .detail .basic-info {
+    position: relative;
+    padding-top: 29px;
+}
+.profile .detail .basic-info .uid {
+    font-size: 19px;
+    line-height: 1;
+}
+.profile .detail .basic-info span {
+    display: block;
+}
+.profile .detail .basic-info .id {
+    font-size: 12px;
+    line-height: 1.65;
+}
+.profile .detail .basic-info a {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 30px 10px 8px 20px;
+}
+
+.profile .detail .basic-info:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    display: block;
+    transform: scaleY(0.5);
+    margin-top: 5px;
+}
+.profile .detail .basic-info a:after {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    content: '';
+    background: url(../../img/My-ZOE/open.png) no-repeat 0px 5px/20px;
+}
+.profile .detail .relationship {
+    margin-top: 15px;
+}
+.profile .detail .relationship a:first-child {
+    margin-right: 20px;
+}
+.profile  a {
+    color: #fff;
+    text-decoration: none;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" ></mata>
+		<link rel="stylesheet" type="text/css" href="css/center/profile.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index/bottom.css"/>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="external nofollow" />
+		<link rel="stylesheet" type="text/css" href="css/order-test.css"/>
+	</head>
+	<body>
+		<!--title-->
+			<div class="golbal-title">
+				<div class="header">
+					<h1><a href="javascript:history.go(-1);">返回</a>购物车</h1>
+				</div>
+			</div>
+		<!--title-->	
+				<!--订单-->
+				<div id="app" class="container">
+				    <table class="table">
+				      <thead>
+				        <tr>
+				          <th>名字</th>
+				          <th>数量</th>
+				          <th>单价</th>
+				          <th>总价</th>
+				          <th>操作</th>
+				        </tr>
+				      </thead>
+				      <tbody>
+				        <tr v-for="(item , index) in message">
+				          <!--<td @click="jia(index)">{{item.id}}</td>-->
+				          <td>{{item.name}}</td>
+				          <td>
+				            <button type="button" class="btn tn-primary" @click="subtract(index)">－</button>
+				            <input type="text" v-model="item.quantity" class="num">
+				            <button type="button" class="btn tn-primary" @click="add(index)">＋</button>
+				          </td>
+				          <td>{{item.price | filtermoney}}</td>
+				          <!--<td>{{arr[index].one}}</td>-->
+				          <td>{{item.price*item.quantity | filtermoney}}</td>
+				          <td>
+				            <button type="button" class="btn btn-danger" @click="remove(index)">移除</button>
+				          </td>
+				        </tr>
+				        <tr>
+				          <td>总购买价  
+				          </td>
+				          <td>
+				            {{animatenum | filtermoney}}
+				          </td>
+				          <!--<td>总购买数量
+				          </td>-->
+				          <td>
+				 
+				          </td>
+				          <td colspan="2">
+				            <button type="button" class="btn btn-danger" @click="empty()">清空购物车</button>
+				          </td>
+				        </tr>
+				      </tbody>
+				    </table>
+				 
+				    <p v-if="message.length===0">您的购物车为空</p>
+				  </div>
+				<!--订单-->
+			<!--底部按钮组-->
+			<div class="bottom">
+				<ul class="bottom-bar">
+					<li class="bar-item"  onclick="window.location.href= 'index.html';return false">
+						<div class="bar-icon">
+							<img src="img/bottom-icon/wxb主页.png"/>
+						</div>
+						<span class="">
+							首页
+						</span>
+					</li>
+					<li class="bar-item" onclick="window.location.href= 'movie-page.html';return false">
+						<div class="bar-icon">
+							<img src="img/bottom-icon/createtask.png"/>
+						</div>
+						<span class="">
+							书影音
+						</span>
+					</li>
+					<!--<li class="bar-item" onclick="window.location.href= 'index.html';return false">
+						<div class="bar-icon">
+							<img src="img/bottom-icon/barrage.png"/>
+						</div>
+						<span class="">
+							广播
+						</span>
+					</li>-->
+					<li class="bar-item" onclick="window.location.href= 'group.html';return false">
+						<div class="bar-icon">
+							<img src="img/bottom-icon/group.png"/>
+						</div>
+						<span class="">
+							小组
+						</span>
+					</li>
+					<li class="bar-item" onclick="window.location.href= 'center.html';return false">
+						<div class="bar-icon">
+							<img src="img/bottom-icon/people.png"/>
+						</div>
+						<span class="">
+							我的
+						</span>
+					</li>
+				</ul>
+			</div>
+			<!--底部按钮组-->
+		<script src="js/auto-size.js" ></script>	
+		<script src="https://unpkg.com/tween.js@16.3.4"></script>
+  		<script src="https://cdn.bootcss.com/vue/2.2.3/vue.min.js"></script>
+  		<script src="js/order-text.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

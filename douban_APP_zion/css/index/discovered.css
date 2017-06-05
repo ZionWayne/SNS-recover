@@ -1,0 +1,29 @@
+.discovered{
+	background: white;
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+.discovered-content{
+	height: 80px;
+	width: 100%;
+	padding: 15px;
+}
+.discovered-item{
+	height: 80px;
+	width: 80px;
+	overflow: hidden;
+	border-radius: 5px;
+	position: relative;
+}
+.discovered-item img{
+	height: 100%;
+	position: absolute;
+	/*left: -1.5rem;*/
+}
+.discovered-item h2{
+	position: absolute;
+	bottom: 0.5rem;
+	left: .5rem;
+	z-index: 2;
+	color: white;
+}

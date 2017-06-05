@@ -1,0 +1,91 @@
+.slider-content{
+	height: 24rem;
+	/*width: 80%;*/
+	/*border: 1px solid black;*/
+	padding: 12px 10px 12px 20px;
+	overflow: hidden;
+}
+.time-card-slider{
+	width: 100%;
+	height: 100%;
+}
+.card{
+	width: 280px;
+	/*border: 1px solid bisque;*/
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow:0 0 5px #AAAAAA;
+}
+.card>div{
+	padding: 10px 15px;
+}
+.img-title{
+	height: 70px;
+
+
+	color: white;
+}
+.img-frist{
+	background: url(../../img/card/p66935596.jpg) center center no-repeat;
+		background-size: cover;
+}
+.img-second{
+	background: url(../../img/card/p71377893.jpg) center center no-repeat;
+		background-size: cover;
+}
+.img-third{
+	background: url(../../img/card/p71392786.jpg) center center no-repeat;
+		background-size: cover;
+}
+.img-title p{
+	margin-top: 15px;
+	font-size: 15px;
+	width: 200px;
+	text-overflow: ellipsis;
+}
+.article-info{
+	height: 30px;
+}
+.article-info h5{
+	font-size:18px ;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-bottom: 5px;
+}
+.article-info span{
+	color: #AAAAAA;
+}
+.profile{
+	height: 48px;
+}
+.peo-header img{
+	border-radius: 50%;
+	float: left;
+	margin-right: 10px;
+} 
+.profile h3{
+	margin: 3px 0;
+	font-size: 15px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.honour{
+	font-size: 12px;
+	font-weight: 200;
+	color: #AAAAAA;
+}
+.column-btn span{
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid rgb(157,218,167);
+	border-radius: 10px;
+}
+
+
+
+
+

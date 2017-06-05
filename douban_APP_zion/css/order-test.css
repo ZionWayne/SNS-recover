@@ -1,0 +1,35 @@
+@media (min-width: 768px){
+.container {
+    width: 100%;
+    font-size: 1rem;
+}
+}
+.table{
+	margin: 0;
+}
+.table tbody tr{
+	height: 4.5rem;
+}
+.table th{
+	width: 3rem;
+}
+.table>tbody>tr>td{
+	vertical-align: middle;
+}
+.num{
+	width: 38px;
+	border: 0;
+	text-align: center;
+}
+.btn{
+	font-size: .8rem;
+	margin: 0 auto;
+}
+h1, h2, h3 {
+     margin-top: 0px; 
+     margin-bottom: 0px; 
+}
+.container{
+	margin-top: 3.5rem;
+	padding: 0;
+}

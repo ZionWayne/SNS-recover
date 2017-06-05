@@ -1,0 +1,114 @@
+#wrapper {
+    width: 950px;
+    margin: 0 auto;
+}
+#content {
+    min-height: 420px;
+}
+.clearfix {
+    display: block;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.grid-16-8 .article {
+    float: left;
+    width: 590px;
+    padding-right: 40px;
+}
+.orders-header {
+    font-size: 20px;
+}
+h1 {
+    word-wrap: break-word;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #494949;
+    margin: 0;
+    padding: 0 0 15px 0;
+    line-height: 1.1;
+}
+.intro {
+    font-size: 12px;
+    font-style: normal;
+    color: #9b9b9b;
+    display: block;
+    margin-top: 6px;
+}
+.orders {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 46px;
+    border-top: 1px solid #ddd;
+}
+.orders li {
+    border-bottom: 1px solid #ddd;
+}
+
+.orders a:link, .orders a:visited {
+    background: none;
+    color: #494949;
+}
+
+.orders a {
+    display: block;
+    padding-left: 22px;
+    padding-right: 10px;
+}
+.extra-text {
+    float: right;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+.extra-text .text {
+    display: none;
+    vertical-align: middle;
+}
+.orders li:hover{
+	background:rgb(249,249,249) ;
+}
+.orders li:hover .extra-text .text {
+	display:inline;
+}
+.arrow {
+    border: 6px solid transparent;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
+    border-left-color: #c7c7c7;
+    position: relative;
+    margin-left: 5px;
+}
+.arrow-bg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-left-color: #fff;
+    top: -6px;
+    left: -7px;
+}
+.pl {
+    font: 12px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+}
+.pl.hint {
+    color: #9b9b9b;
+}

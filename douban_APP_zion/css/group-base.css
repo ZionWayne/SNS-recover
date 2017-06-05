@@ -1,0 +1,119 @@
+.group-home{margin: 0 18px;}
+.group-home ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.group-home a {
+    color: #42bd56;
+    text-decoration: none;
+}
+
+.group-home section {
+    margin-top: 3.5rem;
+    margin-bottom: 30px;
+}
+.group-home h2 {
+    color: #aaa;
+    margin: 0 0 15px;
+    font-size: 15px;
+}
+.base-list {
+    margin-right: -18px;
+    position: relative;
+}
+.base-list::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: #E8E8E8;
+    -webkit-transform: scaleY(0.5);
+    content: '';
+    position: absolute;
+    -webkit-transform-origin: 0 bottom;
+}
+.base-list>li::after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #E8E8E8;
+    -webkit-transform: scaleY(0.5);
+    content: '';
+    position: absolute;
+    -webkit-transform-origin: 0 bottom;
+    }
+.base-list>li {
+    padding: 15px 18px 15px 0;
+    position: relative;
+}    
+.group-home .message, .topic-list-section .message {
+    font-size: 15px;
+    line-height: 1.2;
+    text-align: center;
+    color: #aaa;
+    padding-top: 20px;
+}
+.group-list li {
+    cursor: pointer;
+    position: relative;
+}
+.group-list li.has-add-btn.len-2 {
+    padding-right: 85px;
+}
+.group-list li.has-add-btn.len-4 {
+    padding-right: 120px;
+}
+.group-list li .avatar {
+    width: 36px;
+    height: 36px;
+    float: left;
+    margin-right: 10px;
+}
+.group-list li .detail {
+    min-height: 36px;
+}
+.group-list li .detail h1 {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #494949;
+}
+.group-list li .detail h1, .group-list li .detail h4 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.group-list li .detail h4 {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #ccc;
+    margin-top: 5px;
+}
+.group-list li.has-add-btn .btn {
+    cursor: pointer;
+    border-radius: 4px;
+    border: solid 1px #42bd56;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #42bd56;
+    padding: 5px 15px;
+    position: absolute;
+    right: 18px;
+    top: 15px;
+}
+.base-list .load-more {
+    color: #42bd56;
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1;
+    margin: 30px 18px 30px 0;
+}
